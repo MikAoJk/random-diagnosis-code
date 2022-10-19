@@ -1,14 +1,16 @@
 import React, {useState} from 'react';
 import styles from "./RandomDiagnosisCode.module.css"
+import {RandomDiagnoseResult} from "../../pages/api/diagnose/diagnose";
 
 const RandomDiagnosisCode = () => {
 
     const [randomDiagnosisCode, setRandomDiagnosisCode] = useState("");
 
 
-    const findRandomDiagnosisCode = () => {
-        //Todo choose one from json file
-        setRandomDiagnosisCode('Z09');
+    const findRandomDiagnosisCode = async () => {
+        await fetchRandomDiagnose().then((result) => {
+            setRandomDiagnosisCode(`Code: ${result.randomDiagnose.code} Text: ${result.randomDiagnose.text}`);
+        });
     }
 
     return (
@@ -20,5 +22,9 @@ const RandomDiagnosisCode = () => {
         </div>
     );
 };
+
+async function fetchRandomDiagnose(): Promise<RandomDiagnoseResult> {
+    return await fetch(`/api/diagnose/diagnose`).then((res) => res.json());
+}
 
 export default RandomDiagnosisCode;
