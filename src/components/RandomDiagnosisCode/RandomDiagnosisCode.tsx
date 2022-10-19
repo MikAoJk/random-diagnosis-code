@@ -18,7 +18,7 @@ const RandomDiagnosisCode = () => {
     }
 
     return (
-        <div>
+        <div className={styles.container}>
             <button className={styles.video_game_button} onClick={findRandomDiagnosisCode}>
                 Random
             </button>
