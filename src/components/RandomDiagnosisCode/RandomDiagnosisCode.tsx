@@ -1,6 +1,11 @@
 import React, {useState} from 'react';
 import styles from "./RandomDiagnosisCode.module.css"
-import {RandomDiagnoseResult} from "../../pages/api/diagnose/diagnose";
+import icpc2 from "./data/icpc2.json";
+
+export interface Diagnose {
+    code: string;
+    text: string;
+}
 
 const RandomDiagnosisCode = () => {
 
@@ -8,23 +13,23 @@ const RandomDiagnosisCode = () => {
 
 
     const findRandomDiagnosisCode = async () => {
-        await fetchRandomDiagnose().then((result) => {
-            setRandomDiagnosisCode(`Code: ${result.randomDiagnose.code} Text: ${result.randomDiagnose.text}`);
-        });
+        const randomDiagnose = findRandomDiagnose()
+        setRandomDiagnosisCode(`Code: ${randomDiagnose.code} Text: ${randomDiagnose.text}`);
     }
 
     return (
         <div>
-            {randomDiagnosisCode && <h2 className={styles.h2}> {randomDiagnosisCode} </h2>}
             <button className={styles.video_game_button} onClick={findRandomDiagnosisCode}>
                 Random
             </button>
+            {randomDiagnosisCode && <h2 className={styles.h2}> {randomDiagnosisCode} </h2>}
         </div>
     );
 };
 
-async function fetchRandomDiagnose(): Promise<RandomDiagnoseResult> {
-    return await fetch(`/api/diagnose/diagnose`).then((res) => res.json());
+function findRandomDiagnose(): Diagnose {
+    return icpc2[Math.floor(Math.random() * icpc2.length)];
 }
+
 
 export default RandomDiagnosisCode;
