@@ -8,6 +8,11 @@
 
 ## Getting Started
 
+install
+```bash
+npm install
+```
+n
 First, run the development server:
 
 ```bash
