@@ -1,4 +1,4 @@
-# Random diagnosis code
+# Random icpc-2 diagnosis code
 [![build and deploy main branch](https://github.com/MikAoJk/random-diagnosis-code/actions/workflows/build_and_deploy.yml/badge.svg?branch=main)](https://github.com/MikAoJk/random-diagnosis-code/actions/workflows/build_and_deploy.yml)
 
 ## Technologies used
