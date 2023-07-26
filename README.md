@@ -19,6 +19,9 @@ First, run the development server:
 npm run dev
 ```
 
+## icpc-2 codes
+The icpc-2 codes in json format, is from this repo [navikt/syfodiagnosecodegeneratorjson](https://github.com/navikt/syfodiagnosecodegeneratorjson)
+
 ## Contact
 
 This project is maintained by [CODEOWNERS](CODEOWNERS)
