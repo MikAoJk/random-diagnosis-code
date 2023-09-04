@@ -5,6 +5,14 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    ignore:
+      # ignore patch updates
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-patch"]
+      - dependency-name: "eslint"
+        update-types: ["version-update:semver-patch"]
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-patch"]
 
   # Maintain dependencies for npm
   - package-ecosystem: "npm"
