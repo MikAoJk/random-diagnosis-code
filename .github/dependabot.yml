@@ -15,7 +15,5 @@ updates:
       # ignore patch updates
       - dependency-name: "@types/node"
         update-types: ["version-update:semver-patch"]
-      - dependency-name: "eslint"
-        update-types: ["version-update:semver-patch"]
       - dependency-name: "typescript"
         update-types: ["version-update:semver-patch"]
