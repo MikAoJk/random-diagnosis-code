@@ -3,6 +3,8 @@
 import React, {useState} from 'react';
 import icpc2 from "./data/icpc2.json";
 
+import { Button } from "@navikt/ds-react";
+
 export interface Diagnose {
     code: string;
     text: string;
@@ -19,11 +21,9 @@ const RandomDiagnosisCode = () => {
     }
 
     return (
-        <div className="m-auto pb-5">
-            <button className="inline-block cursor-pointer text-sm leading-none uppercase whitespace-normal font-bold text-center text-white bg-green-700 h-12 mt-2 ml-2" onClick={findRandomDiagnosisCode}>
-                Random
-            </button>
-            {randomDiagnosisCode && <h2 className="text-white h-12 mt-2 ml-2"> {randomDiagnosisCode} </h2>}
+        <div>
+            <Button variant="primary" size="medium" onClick={findRandomDiagnosisCode}>Random</Button>
+            {randomDiagnosisCode && <h2> {randomDiagnosisCode} </h2>}
         </div>
     );
 };
