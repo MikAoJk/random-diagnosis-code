@@ -1,5 +1,6 @@
+'use client';
+
 import React, {useState} from 'react';
-import styles from "./RandomDiagnosisCode.module.css"
 import icpc2 from "./data/icpc2.json";
 
 export interface Diagnose {
@@ -18,11 +19,11 @@ const RandomDiagnosisCode = () => {
     }
 
     return (
-        <div className={styles.container}>
-            <button className={styles.video_game_button} onClick={findRandomDiagnosisCode}>
+        <div className="m-auto pb-5">
+            <button className="inline-block cursor-pointer text-sm leading-none uppercase whitespace-normal font-bold text-center text-white bg-green-700 h-12 mt-2 ml-2" onClick={findRandomDiagnosisCode}>
                 Random
             </button>
-            {randomDiagnosisCode && <h2 className={styles.h2}> {randomDiagnosisCode} </h2>}
+            {randomDiagnosisCode && <h2 className="text-white h-12 mt-2 ml-2"> {randomDiagnosisCode} </h2>}
         </div>
     );
 };

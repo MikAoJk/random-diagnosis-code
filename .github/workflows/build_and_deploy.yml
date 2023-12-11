@@ -12,28 +12,23 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: use Node.js 18
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: npm
-      - name: cache
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.npm
-            ${{ github.workspace }}/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
-          restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
+      - name: setup bun
+        uses: oven-sh/setup-bun@v1
       - name: Install packages
-        run: npm ci
+        run: bun install
       - name: Build
-        run: npm run build
-      - name: Add .nojekyll file
-        run: touch ./out/.nojekyll
-      - name: Deploy🚀
-        uses: JamesIves/github-pages-deploy-action@v4.5.0
+        run: bun run build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          branch: gh-pages
-          folder: out
+          path: ./out
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v3

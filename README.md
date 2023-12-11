@@ -2,21 +2,29 @@
 [![build and deploy main branch](https://github.com/MikAoJk/random-diagnosis-code/actions/workflows/build_and_deploy.yml/badge.svg?branch=main)](https://github.com/MikAoJk/random-diagnosis-code/actions/workflows/build_and_deploy.yml)
 
 ## Technologies used
-* NPM
-* Next.js
+* Bun
 * TypeScript
+* Next.js
+* Tailwind
 
 ## Getting Started
-
-install
+### Prerequisites
+Make sure you have bun installed
+See [bun Installation](https://bun.sh/docs/installation) on how to install it locally
+You can check which bun version you have installed
 ```bash
-npm install
+bun --version
 ```
 
-Run the development server:
+Install deps:
+```bash
+bun run build
+```
+
+First, run the development server:
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 ## icpc-2 codes
