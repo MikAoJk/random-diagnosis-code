@@ -36,3 +36,6 @@ This project is maintained by [CODEOWNERS](CODEOWNERS)
 
 Questions and/or feature requests?
 Please create an [issue](https://github.com/MikAoJk/random-diagnosis-code/issues)
+
+## Live website 
+[random-diagnosis-code](https://mikaojk.github.io/random-diagnosis-code)
