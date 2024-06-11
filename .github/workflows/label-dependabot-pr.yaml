@@ -1,6 +1,6 @@
 name: Label dependabot pr
 on:
-  workflow_call:
+  pull_request
 
 jobs:
   label-pr:
