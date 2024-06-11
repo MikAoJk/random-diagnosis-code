@@ -3,7 +3,6 @@ on:
   pull_request
 
 jobs:
-  
   merge-pullrequests:
     runs-on: ubuntu-latest
     permissions:
