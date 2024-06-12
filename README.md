@@ -24,7 +24,7 @@ bun run build
 First, run the development server:
 
 ```bash
-bun run dev
+bun dev
 ```
 
 ## icpc-2 codes
