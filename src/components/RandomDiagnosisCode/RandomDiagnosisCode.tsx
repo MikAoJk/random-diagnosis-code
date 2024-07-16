@@ -23,7 +23,7 @@ const RandomDiagnosisCode = () => {
     return (
         <div className="flex min-h-screen flex-col p-16 md:items-center md:p-24">
                 <Button variant="primary" size="medium" onClick={findRandomDiagnosisCode}>Random</Button>
-                {randomDiagnosisCode && <Heading size="large" level="1" spacing>{'Code: ${randomDiagnose.code} Text: ${randomDiagnose.text}'}}
+                {randomDiagnosisCode && <Heading size="large" level="1" spacing>{'Code: ${randomDiagnosisCode.code} Text: ${randomDiagnosisCode.text}'}}
         </div>
     );
 };
