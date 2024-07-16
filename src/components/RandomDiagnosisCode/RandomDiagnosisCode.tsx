@@ -17,7 +17,7 @@ const RandomDiagnosisCode = () => {
 
     const findRandomDiagnosisCode = async () => {
         const randomDiagnose = findRandomDiagnose()
-        setRandomDiagnosisCode(`Code: ${randomDiagnose.code} \n Text: ${randomDiagnose.text}`);
+        setRandomDiagnosisCode(`Code: ${randomDiagnose.code} Text: ${randomDiagnose.text}`);
     }
 
     return (
