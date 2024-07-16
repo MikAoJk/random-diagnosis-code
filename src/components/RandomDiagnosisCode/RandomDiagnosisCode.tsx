@@ -20,12 +20,11 @@ const RandomDiagnosisCode = () => {
         setRandomDiagnosisCode(randomDiagnose);
     }
 
-    const randomDiagnoseString = `Code: ${randomDiagnosisCode.code} Text: ${randomDiagnosisCode.text}`
-
     return (
         <div className="flex min-h-screen flex-col p-16 md:items-center md:p-24">
                 <Button variant="primary" size="medium" onClick={findRandomDiagnosisCode}>Random</Button>
-                {randomDiagnosisCode && <Heading size="large" level="1" spacing> {randomDiagnoseString} </Heading>}
+                {randomDiagnosisCode && <Heading size="large" level="1" spacing> {`Code: ${randomDiagnosisCode.code}`} </Heading>}
+                {randomDiagnosisCode && <Heading size="large" level="1" spacing> {`Text: ${randomDiagnosisCode.text}`} </Heading>}
         </div>
     );
 };
