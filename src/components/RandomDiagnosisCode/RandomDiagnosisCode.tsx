@@ -12,7 +12,7 @@ export interface Diagnose {
 
 const RandomDiagnosisCode = () => {
 
-    const [randomDiagnosisCode, setRandomDiagnosisCode] = useState<Diagnose>(null);
+    const [randomDiagnosisCode, setRandomDiagnosisCode] = useState<Diagnose>();
 
 
     const findRandomDiagnosisCode = async () => {
