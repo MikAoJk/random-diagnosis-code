@@ -18,7 +18,7 @@ bun --version
 
 Install deps:
 ```bash
-bun run build
+bun install
 ```
 
 First, run the development server:
