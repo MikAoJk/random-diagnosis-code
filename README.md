@@ -28,7 +28,7 @@ bun dev
 ```
 
 ## icpc-2 codes
-The icpc-2 codes in json format, is from this repo [navikt/syfodiagnosecodegeneratorjson](https://github.com/navikt/syfodiagnosecodegeneratorjson)
+The icpc-2 codes in json format, is from here: https://github.com/navikt/diagnosekoder/blob/main/packages/%40navikt/diagnosekoder/src/ICPC2.json
 
 ## Contact
 
