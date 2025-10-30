@@ -1,11 +1,8 @@
 name: build and deploy main branch
 on:
-   pull_request:
-     types:
-       - opened
-       - reopened
-       - edited
-   workflow_dispatch:    
+  push:
+    branches:
+     - '!main'
 
 permissions:
   contents: read
