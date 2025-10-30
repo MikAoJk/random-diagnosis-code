@@ -1,8 +1,8 @@
 name: build and deploy main branch
 on:
   push:
-    branches:
-     - '!main'
+    branches-ignore:
+      - main
 
 permissions:
   contents: read
