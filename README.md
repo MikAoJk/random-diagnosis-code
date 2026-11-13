@@ -27,6 +27,16 @@ First, run the development server:
 bun dev
 ```
 
+Build the static site and run lint checks:
+
+```bash
+bun run build
+bun run lint
+```
+
+TypeScript stays on 6.0.3 because the Next.js ESLint tooling does not yet
+support TypeScript 7.
+
 ## icpc-2 codes
 The icpc-2 codes in json format, is from here: https://github.com/navikt/diagnosekoder/blob/main/packages/%40navikt/diagnosekoder/src/ICPC2.json
 
